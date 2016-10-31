@@ -1,1 +1,1 @@
-web: npm prd
+web: npm start

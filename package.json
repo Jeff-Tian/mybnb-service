@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "prd": "node --harmony app.js prd",
-    "start": "node --harmony app.js",
+    "start": "node --harmony app.js prd",
+    "bin": "node --harmony app.js",
     "test": "mocha --harmony"
   },
   "dependencies": {
