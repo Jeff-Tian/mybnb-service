@@ -7,7 +7,7 @@ var config = {
     staging: {
         mode: 'staging',
         port: '8002',
-        mongoUrl: process.env.MONGODB_URI || 'mongodb://localhost:27017/mybnb_staging'
+        mongoUrl: process.env.MONGODB_URI
     },
     prd: {
         mode: 'prd',

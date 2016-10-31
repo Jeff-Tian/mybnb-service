@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node --harmony app.js prd",
+    "start": "node --harmony app.js staging",
     "bin": "node --harmony app.js",
     "test": "mocha --harmony"
   },
