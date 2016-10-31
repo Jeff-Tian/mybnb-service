@@ -18,6 +18,12 @@ app.use(route.get('/', function *home(next) {
     this.body = 'Hello World!';
 }));
 
+app.use(route.get('/env', function *(next) {
+    this.body = JSON.stringify({
+
+    });
+}));
+
 
 if (!module.parent) {
     var port = process.env.PORT || config.port || 8002;
