@@ -3,6 +3,7 @@ const monk = require('monk');
 const db = monk(config.mongoUrl);
 const wrap = require('co-monk');
 const parse = require('co-body');
+const Order = require('../BLL/order');
 
 var orders = wrap(db.get('orders'));
 
@@ -13,10 +14,9 @@ module.exports = function (app, route) {
 
     app.use(route.put('/api/orders', function *(next) {
         var order = yield parse(this);
+        order.status = Order.status.pending;
         order.created_at = new Date;
 
-        yield orders.insert(order);
-
-        this.body = 'done';
+        this.body = yield orders.insert(order);
     }));
 };
