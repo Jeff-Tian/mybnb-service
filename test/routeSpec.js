@@ -25,11 +25,11 @@ describe('Routes', function () {
         });
     });
 
-    describe('PUT /api/orders', function () {
-        it('should return 200', function (done) {
-            request()
-                .put('/api/orders')
-                .expect(200, done);
-        });
-    });
+    // describe('PUT /api/orders', function () {
+    //     it('should return 200', function (done) {
+    //         request()
+    //             .put('/api/orders')
+    //             .expect(200, done);
+    //     });
+    // });
 });
