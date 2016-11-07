@@ -8,6 +8,10 @@ const Order = require('../BLL/order');
 var orders = wrap(db.get('orders'));
 
 module.exports = function (app, route) {
+    app.use(route.get('/api/connection', function*(next) {
+        this.body = require('../config/config')().mongoUrl;
+    }));
+
     app.use(route.get('/api/orders', function *(next) {
         this.body = yield orders.find({});
     }));

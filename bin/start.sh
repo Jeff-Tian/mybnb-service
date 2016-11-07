@@ -9,4 +9,4 @@ if [ -n "$PORT" ]; then
 fi
 
 CURRENT_PATH=`dirname $0`
-pm2 start "$CURRENT_PATH/../app.js" --name "$APP_NAME"
+pm2 start "$CURRENT_PATH/../app.js -x -- prd" --name "$APP_NAME"
